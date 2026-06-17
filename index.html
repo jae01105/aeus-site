@@ -3,135 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AEUS는 마우스 커서를 비행기 모드로 바꾸고, 사용이 끝난 뒤 이동 경로를 잔상으로 보여주는 Windows 앱입니다.">
-  <title>AEUS — Mouse Airplane Mode</title>
+  <meta name="description" content="AEUS는 마우스 커서를 비행기처럼 전환하고, 움직임을 실제 cm/m 거리와 항로 로그로 기록하는 Windows용 커서 비행 시스템입니다.">
+  <title>AEUS | Aerial Cursor System</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Noto+Sans+KR:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260616">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260617-aeus">
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="#top">
-      <img src="assets/aeus-plane.png" alt="">
-      <span>AEUS</span>
+  <header class="site-nav">
+    <a class="brand" href="#top" aria-label="AEUS 홈">
+      <span class="brand-mark"><img src="assets/aeus-plane.png" alt=""></span>
+      <span>
+        <strong>AEUS</strong>
+        <small>AERIAL CURSOR SYSTEM</small>
+      </span>
     </a>
-    <nav>
+    <nav aria-label="주요 메뉴">
       <a href="#features">기능</a>
-      <a href="#route">오늘의 경로</a>
-      <a href="#log">여행 로그</a>
+      <a href="#distance">거리 환산</a>
+      <a href="#log">비행 로그</a>
+      <a href="#start">시작하기</a>
     </nav>
-    <a class="nav-cta" href="#download">시작하기</a>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">MOUSE AIRPLANE MODE</p>
-        <h1><span>마우스를</span><em>비행기 모드로.</em></h1>
-        <p class="hero-text">AEUS는 커서를 비행기 아이콘으로 바꾸고, 비행을 끝낸 뒤에만 이동 경로를 보여줍니다. 사용 중에는 클릭과 스크롤을 방해하지 않습니다.</p>
+        <p class="eyebrow">AERIAL CURSOR SYSTEM</p>
+        <h1>움직임은 자유롭게.<br><span>비행은 아름답게.</span></h1>
+        <p class="lead">AEUS는 평범한 마우스 커서를 작은 항공기로 바꾸고, 당신의 움직임을 실제 거리와 비행 로그로 번역하는 가장 쓸모있는 쓸데없음입니다.</p>
         <div class="hero-actions">
-          <a class="primary" href="#download">다운로드 준비</a>
-          <a class="secondary" href="#features">기능 설명 보기</a>
+          <a class="primary" href="#features">기능 소개 보기</a>
+          <a class="secondary" href="#distance">거리 환산 방식</a>
         </div>
       </div>
 
-      <section class="app-card" aria-label="AEUS 온오프 버튼 데모">
-        <div class="app-status">
-          <span></span>
-          <strong id="demo-status">비행 준비 완료</strong>
-        </div>
-        <button class="giant-toggle" id="giant-toggle" type="button" aria-pressed="false">
-          <span class="toggle-plane"><img src="assets/aeus-plane.png" alt=""></span>
-          <span class="toggle-label">OFF</span>
+      <div class="switch-card" aria-label="AEUS 비행 모드 스위치 미리보기">
+        <div class="status-line"><span></span><strong>비행 준비 완료</strong></div>
+        <button class="flight-switch" type="button" aria-pressed="false">
+          <span class="plane-knob"><img src="assets/aeus-plane.png" alt=""></span>
+          <span class="switch-label">OFF</span>
         </button>
-        <h2>큰 버튼 하나면 충분합니다.</h2>
-        <p id="demo-copy">켜면 커서가 이륙하고, 끄면 오늘의 경로가 나타납니다.</p>
-      </section>
+        <h2>한 번의 클릭으로,<br>비행이 시작됩니다.</h2>
+        <p>켜면 커서가 이륙하고, 끄면 오늘의 항로가 나타납니다.</p>
+      </div>
     </section>
 
-    <section class="features" id="features">
-      <div class="section-copy">
-        <p class="eyebrow">CORE FEATURES</p>
-        <h2>불필요한 기능은 빼고,<br>비행 경험만 남겼습니다.</h2>
+    <section class="proof-strip" aria-label="AEUS 핵심 지표">
+      <article><strong>1 Switch</strong><span>큰 버튼 하나로 시작과 종료</span></article>
+      <article><strong>cm / m</strong><span>화면 크기 기반 실제 거리 환산</span></article>
+      <article><strong>Silent</strong><span>비행 중에는 항로를 숨김 기록</span></article>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">FEATURES</p>
+        <h2>장난처럼 켜고,<br>브랜드처럼 남깁니다.</h2>
+        <p>AEUS는 단순한 커서 변경 프로그램이 아닙니다. 마우스 움직임을 비행 경험으로 바꾸고, 종료 순간 하나의 항로 기록으로 정리합니다.</p>
       </div>
-      <div class="feature-list">
+      <div class="feature-grid">
         <article>
           <span>01</span>
-          <h3>실제 커서 전환</h3>
-          <p>앱의 스위치를 켜면 Windows 기본 커서가 제공된 비행기 커서로 바뀝니다.</p>
+          <h3>비행기 커서 전환</h3>
+          <p>스위치를 켜는 순간 시스템 커서가 비행기 아이콘으로 전환됩니다. 클릭, 드래그, 스크롤은 평소처럼 그대로 사용할 수 있습니다.</p>
         </article>
         <article>
           <span>02</span>
-          <h3>입력 방해 없음</h3>
-          <p>커서 모양만 바뀌며 클릭, 드래그, 스크롤은 평소처럼 그대로 작동합니다.</p>
+          <h3>조용한 항로 기록</h3>
+          <p>비행 중에는 이동 경로가 화면에 나타나지 않습니다. 사용을 방해하지 않고 뒤에서만 항로를 기록합니다.</p>
         </article>
         <article>
           <span>03</span>
-          <h3>숨겨진 경로 기록</h3>
-          <p>비행 중에는 잔상이 보이지 않습니다. 이동 경로는 조용히 기록됩니다.</p>
+          <h3>실제 거리 계산</h3>
+          <p>모니터 인치와 화면 비율을 입력하면 픽셀 이동량을 cm, m, km 단위의 현실 거리로 환산합니다.</p>
         </article>
         <article>
           <span>04</span>
-          <h3>종료 후 경로 공개</h3>
-          <p>스위치를 끄면 커서가 복원되고, 오늘의 이동이 빛나는 경로로 표시됩니다.</p>
+          <h3>오늘의 경로 공개</h3>
+          <p>비행을 종료하면 움직임이 잔상처럼 시각화됩니다. 오늘 커서가 지나간 길을 한 장의 항로 이미지로 확인합니다.</p>
         </article>
       </div>
     </section>
 
-    <section class="route-section" id="route">
-      <div class="route-copy">
-        <p class="eyebrow">TODAY'S ROUTE</p>
-        <h2>사용 중에는 비밀.<br><em>종료 후에는 기록.</em></h2>
-        <p>토글을 켜면 아래 패널은 기록 중 상태로 바뀝니다. 다시 끄면 잔상 경로가 공개됩니다.</p>
+    <section class="distance-section" id="distance">
+      <div>
+        <p class="eyebrow">REAL DISTANCE</p>
+        <h2>픽셀은 숫자일 뿐,<br>AEUS는 거리로 번역합니다.</h2>
+        <p>27인치 16:9 모니터와 1920×1080 해상도라면, 가로와 세로의 1픽셀이 실제 몇 cm인지 계산할 수 있습니다. AEUS는 이동 방향까지 반영해 마우스가 실제 화면 위에서 이동한 물리 거리를 더합니다.</p>
       </div>
-      <div class="route-visual" id="route-visual">
-        <div class="route-hidden">
-          <span class="radar"></span>
-          <strong>경로 기록 중</strong>
-          <p>비행이 끝나면 공개됩니다.</p>
-        </div>
-        <div class="route-revealed">
-          <div class="route-meta"><strong>오늘의 경로</strong><span>FREE FLIGHT · 12.4 KM</span></div>
-          <svg viewBox="0 0 800 330" role="img" aria-label="오늘의 마우스 이동 경로">
-            <defs>
-              <filter id="glow"><feGaussianBlur stdDeviation="10" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-              <linearGradient id="trail" x1="0" x2="1"><stop offset="0" stop-color="#8bb2ff" stop-opacity=".25"/><stop offset=".55" stop-color="#3975f6"/><stop offset="1" stop-color="#5edcff"/></linearGradient>
-            </defs>
-            <path d="M55 250 C115 70 190 290 275 155 S425 40 475 175 S615 295 745 75" fill="none" stroke="url(#trail)" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
-            <circle cx="55" cy="250" r="8" fill="#fff" stroke="#3975f6" stroke-width="4"/>
-            <circle cx="745" cy="75" r="12" fill="#5edcff" stroke="#fff" stroke-width="5"/>
+      <div class="formula-card">
+        <span>Screen Profile</span>
+        <strong>27 inch · 16:9</strong>
+        <div class="formula-row"><em>가로 길이</em><b>59.8 cm</b></div>
+        <div class="formula-row"><em>세로 길이</em><b>33.6 cm</b></div>
+        <div class="formula-row"><em>1 px</em><b>약 0.031 cm</b></div>
+      </div>
+    </section>
+
+    <section class="section log-section" id="log">
+      <div class="route-preview">
+        <div class="route-canvas">
+          <svg viewBox="0 0 720 320" role="img" aria-label="커서 항로 예시">
+            <path class="route-glow" d="M48 230 C140 80 238 250 330 132 S520 62 672 186"/>
+            <path class="route-line" d="M48 230 C140 80 238 250 330 132 S520 62 672 186"/>
+            <circle cx="48" cy="230" r="9"/>
+            <circle cx="672" cy="186" r="13"/>
           </svg>
         </div>
       </div>
-    </section>
-
-    <section class="log-section" id="log">
-      <div class="section-copy">
+      <div class="log-copy">
         <p class="eyebrow">FLIGHT LOG</p>
-        <h2>마우스 움직임이<br>작은 여행 로그가 됩니다.</h2>
-        <p>비행을 종료할 때마다 날짜, 거리, 시간, 경로 이미지가 저장됩니다.</p>
-      </div>
-      <div class="log-list">
-        <article><strong>자유 비행</strong><span>오늘 · 12.4 km · 18:42</span></article>
-        <article><strong>자유 비행</strong><span>어제 · 8.7 km · 13:08</span></article>
-        <article><strong>자유 비행</strong><span>06.13 · 21.1 km · 31:20</span></article>
+        <h2>착륙 후에만 나타나는<br>오늘의 항로.</h2>
+        <p>비행 중에는 아무것도 방해하지 않습니다. 대신 종료하는 순간, 실제 이동 거리와 시간, 최고 속도, 경로 이미지가 여행 로그처럼 저장됩니다.</p>
+        <ul>
+          <li>실제 이동 거리 cm/m/km 표시</li>
+          <li>비행 시간과 최고 속도 기록</li>
+          <li>잔상처럼 보이는 항로 이미지 저장</li>
+        </ul>
       </div>
     </section>
 
-    <section class="download" id="download">
-      <img src="assets/aeus-plane.png" alt="">
-      <p class="eyebrow">READY FOR TAKEOFF?</p>
-      <h2>기내에서도 망설임 없이.</h2>
-      <p>클릭은 그대로, 커서만 이륙합니다.</p>
+    <section class="start-band" id="start">
+      <div>
+        <p class="eyebrow">READY TO TAKE OFF</p>
+        <h2>마우스를 비행기 모드로.<br>기내에서도 망설임 없이.</h2>
+        <p>AEUS는 쓸데없어 보이지만 이상하게 계속 쓰고 싶어지는 커서 시스템입니다. 한 번 켜고, 움직이고, 착륙하세요.</p>
+      </div>
+      <a class="primary light" href="#top">맨 위로</a>
     </section>
   </main>
 
   <footer>
     <strong>AEUS</strong>
     <span>Move freely. Fly beautifully.</span>
-    <span>© 2026 AEUS</span>
   </footer>
-  <script src="script.js?v=20260616"></script>
+
+  <script src="script.js?v=20260617-aeus"></script>
 </body>
 </html>
